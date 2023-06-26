@@ -1,0 +1,12 @@
+{
+    "Notice": {
+        "Info": "🎈🎈 明日的实时占用数据也可支持查询啦！欢迎测试&使用！！实时占用数据库每 4 hours自动更新一次" 
+    },
+    
+    "PulseSensor": {
+        "LatestVersion": "2.1.5",
+        "Url": "http://install.sokedev.cn/mdres/MDRES2.0.7.exe",
+        "UpdateTime": "2022-12-05",
+        "ReleaseNote": "\n1.添加了教室实时占用系统模块，由于目前处于测试阶段，可能会出现一些问题，望能及时反馈;\n2.修改了一些UI方面的布局，优化界面细节;\n3.实现根据当前时刻捕捉节次自动更新占用信息；"
+    }
+}
