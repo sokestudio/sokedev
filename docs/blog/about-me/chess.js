@@ -86,7 +86,7 @@ var image = new Image();
 image.src = "logo.svg";
 image.onload = function() {
     //drawImage参数（图片路径，图片顶点位置，图片顶点位置，宽，高）
-    context.drawImage(image, 0, 0, 450, 450);
+    context.drawImage(image, 0, 0, 300, 300);
     drawChessImage();
     // drawArc(0, 0, true);
     // drawArc(1, 1, false);
@@ -106,8 +106,8 @@ chess.onclick = function(e) {
         return;
     }
     //只要在一定范围内点击都能算在最近一个交叉点落子
-    var x = Math.floor(e.offsetX / 30);
-    var y = Math.floor(e.offsetY / 30);
+    var x = Math.floor(e.offsetX / 20);
+    var y = Math.floor(e.offsetY / 20);
     // console.log("监听点2");
     if (checkChess[x][y] == 0) {
         drawArc(x, y, me);
@@ -239,9 +239,9 @@ var conPlayAI = function() {
 var drawArc = function(x, y, me) {
     context.beginPath();
     //arc参数（圆心横坐标，圆心纵坐标，半径，起始弧度，终止弧度）
-    context.arc(15 + x * 30, 15 + y * 30, 13, 0, 2 * Math.PI);
+    context.arc(10 + x * 20, 10 + y * 20, 8, 0, 2 * Math.PI);
     context.closePath();
-    var colorChange = context.createRadialGradient(15 + x * 30, 15 + y * 30, 13, 15 + x * 30, 15 + y * 30, 0);
+    var colorChange = context.createRadialGradient(10 + x * 20, 10 + y * 20, 8, 10 + x * 20, 10 + y * 20, 0);
     if (me) {
         colorChange.addColorStop(0, "#0a0a0a");
         colorChange.addColorStop(1, "#636766");
@@ -257,11 +257,11 @@ var drawArc = function(x, y, me) {
 //画棋盘
 var drawChessImage = function() {
     for (var i = 0; i < 15; i++) {
-        context.moveTo(15 + i * 30, 15);
-        context.lineTo(15 + i * 30, 435);
+        context.moveTo(10 + i * 20, 10);
+        context.lineTo(10 + i * 20, 290);
         context.stroke();
-        context.moveTo(15, 15 + i * 30);
-        context.lineTo(435, 15 + i * 30);
+        context.moveTo(10, 10 + i * 20);
+        context.lineTo(290, 10 + i * 20);
         context.stroke();
     }
 }
