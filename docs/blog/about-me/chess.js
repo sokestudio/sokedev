@@ -83,7 +83,7 @@ context.strokeStyle = "#bfbfbf";
 
 //背景设置
 var image = new Image();
-image.src = "logo.svg";
+image.src = "logo.png";
 image.onload = function() {
     //drawImage参数（图片路径，图片顶点位置，图片顶点位置，宽，高）
     context.drawImage(image, 0, 0, 300, 300);
@@ -256,10 +256,14 @@ var drawArc = function(x, y, me) {
 
 //画棋盘
 var drawChessImage = function() {
-    for (var i = 0; i < 15; i++) {
+    for (var i = 0; i < 30; i++) {
+        
+     
         context.moveTo(10 + i * 20, 10);
         context.lineTo(10 + i * 20, 290);
         context.stroke();
+        
+
         context.moveTo(10, 10 + i * 20);
         context.lineTo(290, 10 + i * 20);
         context.stroke();
